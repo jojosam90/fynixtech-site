@@ -847,3 +847,7 @@ details p { margin: 14px 0 0; color: var(--muted); line-height: 1.7; font-size: 
 .soon-actions .btn { width: 100%; }
 .soon-close { border: 1px solid var(--line); background: #fff; color: var(--ink); font: inherit; font-weight: 600; cursor: pointer; }
 .soon-card img { display: block; margin: 0 auto; }
+
+/* hero mock: rendered product shots */
+.hx-shot { background: #f6eef1; }
+.hx-shot img { display: block; width: 100%; height: 100%; object-fit: cover; }

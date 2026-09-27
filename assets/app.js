@@ -59,57 +59,8 @@
     var SVGNS = "http://www.w3.org/2000/svg";
     var html = function (tag, cls, markup) { var n = el(tag, cls); n.innerHTML = markup; return n; };
 
-    // Pink silk sleep mask, drawn as vector art (no image files needed). id keeps gradient ids unique per shot.
-    function mask(id, x, y, s) {
-      return '<g transform="translate(' + x + ' ' + y + ') scale(' + s + ')">' +
-        '<path d="M-44 0 C-60 -2 -70 -6 -78 -4" stroke="#e7a9c4" stroke-width="3" fill="none"/>' +
-        '<path d="M44 0 C60 -2 70 -6 78 -4" stroke="#e7a9c4" stroke-width="3" fill="none"/>' +
-        '<path d="M-46 -2 C-46 -22 -24 -28 0 -21 C24 -28 46 -22 46 -2 C46 18 26 26 10 17 C5 14 -5 14 -10 17 C-26 26 -46 18 -46 -2Z" fill="url(#' + id + 'm)"/>' +
-        '<path d="M-38 -10 C-26 -20 -10 -18 0 -14 C10 -18 26 -20 38 -10" stroke="#fff" stroke-opacity=".55" stroke-width="3" fill="none" stroke-linecap="round"/>' +
-        '<path d="M-46 -2 C-46 18 -26 26 -10 17 C-5 14 5 14 10 17 C26 26 46 18 46 -2" stroke="#d9869f" stroke-width="1.5" fill="none" opacity=".6"/>' +
-        '</g>';
-    }
-    function defs(id, bg1, bg2) {
-      return '<defs><linearGradient id="' + id + 'b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="' + bg1 + '"/><stop offset="1" stop-color="' + bg2 + '"/></linearGradient>' +
-        '<linearGradient id="' + id + 'm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd1e3"/><stop offset=".5" stop-color="#f7a8c8"/><stop offset="1" stop-color="#e889b2"/></linearGradient></defs>';
-    }
-    var SHOTS = [
-      function (id) { // hero
-        return defs(id, "#fff1f6", "#fbd5e6") + '<rect width="200" height="200" fill="url(#' + id + 'b)"/>' +
-          '<ellipse cx="100" cy="138" rx="70" ry="10" fill="#e9b3c9" opacity=".45"/>' + mask(id, 100, 100, 1.25) +
-          '<circle cx="160" cy="40" r="6" fill="#fff" opacity=".8"/><circle cx="40" cy="54" r="3" fill="#fff" opacity=".8"/>';
-      },
-      function (id) { // silk detail
-        var waves = "";
-        for (var i = 0; i < 9; i++) waves += '<path d="M-10 ' + (20 + i * 22) + ' C40 ' + (6 + i * 22) + ' 80 ' + (40 + i * 22) + ' 130 ' + (18 + i * 22) + ' S190 ' + (i * 22) + ' 220 ' + (24 + i * 22) + '" stroke="#fff" stroke-opacity="' + (0.18 + (i % 3) * 0.12) + '" stroke-width="10" fill="none"/>';
-        return defs(id, "#f9b6d0", "#e57fa9") + '<rect width="200" height="200" fill="url(#' + id + 'b)"/>' + waves +
-          '<circle cx="140" cy="60" r="34" fill="none" stroke="#fff" stroke-width="3"/><path d="M164 84 L186 106" stroke="#fff" stroke-width="5" stroke-linecap="round"/>' +
-          '<text x="16" y="182" font-family="Inter,sans-serif" font-size="15" font-weight="700" fill="#fff">22 momme</text>';
-      },
-      function (id) { // size guide
-        return defs(id, "#f5f3ff", "#e9e3ff") + '<rect width="200" height="200" fill="url(#' + id + 'b)"/>' + mask(id, 94, 78, 1.05) +
-          '<path d="M46 116 H142 M46 110 V122 M142 110 V122" stroke="#6d4aff" stroke-width="2"/>' +
-          '<text x="94" y="136" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#5b3df5">19.5 cm</text>' +
-          '<path d="M160 56 V100 M154 56 H166 M154 100 H166" stroke="#6d4aff" stroke-width="2"/>' +
-          '<text x="170" y="82" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#5b3df5">9 cm</text>';
-      },
-      function (id) { // in use
-        return defs(id, "#e0e7ff", "#f5e1ff") + '<rect width="200" height="200" fill="url(#' + id + 'b)"/>' +
-          '<rect x="0" y="150" width="200" height="50" fill="#fff" opacity=".7"/><ellipse cx="96" cy="150" rx="70" ry="16" fill="#fff"/>' +
-          '<path d="M62 60 C62 26 132 26 132 60 V112 C132 138 62 138 62 112Z" fill="#8a5a44"/>' +
-          '<ellipse cx="97" cy="98" rx="33" ry="40" fill="#f3c9a8"/><path d="M64 70 C70 40 126 40 130 72 C116 58 80 58 64 70Z" fill="#8a5a44"/>' +
-          mask(id, 97, 92, .75) + '<path d="M88 118 Q97 124 106 118" stroke="#c77b6a" stroke-width="2.5" fill="none" stroke-linecap="round"/>' +
-          '<text x="142" y="52" font-family="Inter,sans-serif" font-size="16" font-weight="800" fill="#7c6cf0">z</text><text x="154" y="36" font-family="Inter,sans-serif" font-size="12" font-weight="800" fill="#a99cff">z</text>';
-      },
-      function (id) { // gift box
-        return defs(id, "#fff7ed", "#ffe4ef") + '<rect width="200" height="200" fill="url(#' + id + 'b)"/>' +
-          '<rect x="40" y="96" width="120" height="70" rx="6" fill="#fff" stroke="#f1c1d6" stroke-width="2"/>' +
-          '<rect x="40" y="96" width="120" height="16" fill="#f7d6e6"/>' + mask(id, 100, 92, .8) +
-          '<rect x="94" y="96" width="12" height="70" fill="#5b3df5" opacity=".85"/>' +
-          '<path d="M100 96 C84 78 70 86 80 96 M100 96 C116 78 130 86 120 96" stroke="#5b3df5" stroke-width="5" fill="none" stroke-linecap="round"/>' +
-          '';
-      },
-    ];
+    // Pink silk sleep mask: studio renders of one product (hero, silk detail, size, bedtime, gift box)
+    var SHOTS = ["hero", "detail", "size", "bedtime", "gift"];
 
     function stars(n) {
       var full = Math.round(n * 2) / 2, s = "";
@@ -134,12 +85,12 @@
           '<svg viewBox="0 0 300 92" preserveAspectRatio="none"><defs><linearGradient id="hxbar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b3df5"/><stop offset="1" stop-color="#2f6bff"/></linearGradient></defs>' + bars + '</svg>');
         return [el("h4", null, T("hx.0.h")), kpis, chart, list(["hx.0.l2", "hx.0.l3"])];
       },
-      function () { // product images: 5 illustrated shots
+      function () { // product images: 5 rendered shots
         var grid = el("div", "hx-shots");
         for (var i = 0; i < 5; i++) {
           var fig = el("figure", "hx-shot");
           fig.style.animationDelay = (i * 120) + "ms";
-          fig.innerHTML = '<svg viewBox="0 0 200 200" xmlns="' + SVGNS + '">' + SHOTS[i]("hxs" + i + "_") + "</svg>";
+          fig.innerHTML = '<img src="assets/img/shots/mask-' + SHOTS[i] + '.webp" alt="" width="400" height="400" decoding="async" />';
           fig.appendChild(el("figcaption", null, T("hx.1.i" + (i + 1))));
           grid.appendChild(fig);
         }
