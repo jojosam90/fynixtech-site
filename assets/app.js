@@ -59,8 +59,8 @@
     var SVGNS = "http://www.w3.org/2000/svg";
     var html = function (tag, cls, markup) { var n = el(tag, cls); n.innerHTML = markup; return n; };
 
-    // Pink silk sleep mask: studio renders of one product (hero, silk detail, size, bedtime, gift box)
-    var SHOTS = ["hero", "detail", "size", "bedtime", "gift"];
+    // Blue silk sleep mask: real photos of one product (Pexels, see assets/img/shots/CREDITS.md)
+    var SHOTS = ["hero", "detail", "flatlay", "inuse", "lifestyle"];
 
     function stars(n) {
       var full = Math.round(n * 2) / 2, s = "";
@@ -85,7 +85,7 @@
           '<svg viewBox="0 0 300 92" preserveAspectRatio="none"><defs><linearGradient id="hxbar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b3df5"/><stop offset="1" stop-color="#2f6bff"/></linearGradient></defs>' + bars + '</svg>');
         return [el("h4", null, T("hx.0.h")), kpis, chart, list(["hx.0.l2", "hx.0.l3"])];
       },
-      function () { // product images: 5 rendered shots
+      function () { // product images: 5 product photos
         var grid = el("div", "hx-shots");
         for (var i = 0; i < 5; i++) {
           var fig = el("figure", "hx-shot");
