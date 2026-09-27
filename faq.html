@@ -1,0 +1,479 @@
+<!doctype html>
+<html data-app-soon lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fynix Task — Singapore Web &amp; Mobile AI Agent</title>
+  <meta name="description" content="Fynix Task is your AI business team on the web and on your phone: specialist agents for sourcing, design, websites and store operations, in English, 中文 and Bahasa Melayu." />
+  <meta property="og:title" content="Fynix Task — Singapore Web & Mobile AI Agent" />
+  <meta property="og:description" content="Your AI business team on the web and on your phone." />
+  <meta property="og:image" content="assets/img/desk-agents-light.webp" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="assets/img/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css?v=20260927194614" />
+</head>
+<body>
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/main" aria-label="Fynix Task">
+        <img src="assets/img/logo.png" alt="" width="30" height="30" />
+        <span>Fynix Task</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="/product" data-i18n="nav.product">Product</a>
+        <a href="/agents" data-i18n="nav.agents">Agents</a>
+        <a href="/mobile" data-i18n="nav.mobile">Mobile</a>
+        <a href="/pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="/faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-login" href="/task/app/login" data-i18n="nav.login">Log in</a>
+        <a class="btn btn-light" href="/task/app/login" data-i18n="nav.try">Try Fynix Task</a>
+        <button class="nav-burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="nav-mobile" hidden>
+      <a href="/product" data-i18n="nav.product">Product</a>
+      <a href="/agents" data-i18n="nav.agents">Agents</a>
+      <a href="/mobile" data-i18n="nav.mobile">Mobile</a>
+      <a href="/pricing" data-i18n="nav.pricing">Pricing</a>
+      <a href="/faq" data-i18n="nav.faq">FAQ</a>
+      <a class="btn btn-accent" href="/task/app/login" data-i18n="nav.try">Try Fynix Task</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO (dark) ============ -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> <span data-i18n="hero.eyebrow">Singapore Web &amp; Mobile AI Agent</span></p>
+          <h1 class="hero-title">
+            <span class="line"><span data-i18n="hero.t1">Your AI Operations Team—</span></span>
+            <span class="line"><span class="grad" data-i18n="hero.t2">Everywhere You Are</span></span>
+          </h1>
+          <p class="hero-sub" data-i18n="hero.sub">Hand off your goals to Fynix Task. Dedicated AI agents handle sourcing, design, and store management while you monitor progress seamlessly from web or mobile.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-accent btn-lg" href="/task/app/login"><span data-i18n="hero.ctaWeb">Try in your browser</span> <svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+
+          </div>
+
+        </div>
+        <!-- Live app mock: a cursor opens tasks and the chat fills in (visitors can click tasks too) -->
+        <div class="hero-visual">
+          <div class="window hx" id="hx">
+            <div class="hx-body">
+              <aside class="hx-side">
+                <div class="hx-bar"><i></i><i></i><i></i></div>
+                <div class="hx-brand"><img src="assets/img/logo.png" alt="" width="20" height="20" /><b>Fynix Task</b></div>
+                <nav class="hx-nav">
+                  <span><svg viewBox="0 0 24 24"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7M18.4 2.6a2 2 0 0 1 3 3L12 15l-4 1 1-4z"/></svg><em data-i18n="demo.newTask">New Task</em></span>
+                  <span><svg viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M2 21a8 8 0 0 1 13-6M19 16v6M16 19h6"/></svg><em data-i18n="nav.agents">Agents</em></span>
+                  <span><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg><em data-i18n="demo.plugins">Plugins</em></span>
+                  <span><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg><em data-i18n="demo.channels">Channels</em></span>
+                </nav>
+                <p class="hx-sec" data-i18n="hx.tasks">Tasks</p>
+                <div class="hx-tasks">
+                  <button type="button" data-task="0"><span class="hx-spin"></span><em data-i18n="demo.t1">Shop performance review</em></button>
+                  <button type="button" data-task="1"><span class="hx-spin"></span><em data-i18n="demo.t2">Product main images</em></button>
+                  <button type="button" data-task="2"><span class="hx-spin"></span><em data-i18n="demo.t3">Buyer research</em></button>
+                  <button type="button" data-task="3"><span class="hx-spin"></span><em data-i18n="demo.t4">Competitor comparison</em></button>
+                </div>
+                <p class="hx-sec" data-i18n="hx.groups">Group chats</p>
+                <div class="hx-tasks">
+                  <button type="button" data-task="4"><span class="hx-spin"></span><span class="hx-gstack"><i style="--c1:#f59e0b;--c2:#ef4444"></i><i style="--c1:#ec4899;--c2:#a855f7"></i><i style="--c1:#d946ef;--c2:#f43f5e"></i></span><em data-i18n="demo.t5">Product launch team</em></button>
+                </div>
+                <div class="hx-user"><span>ML</span><b>Mei Ling</b></div>
+              </aside>
+              <section class="hx-main">
+                <header class="hx-head"><b class="hx-title"></b></header>
+                <div class="hx-chat" aria-live="polite"></div>
+                <div class="hx-composer">
+                  <span data-i18n="hx.ask">Ask anything… (@ to reference files)</span>
+                  <div><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><i></i><b><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></b></div>
+                </div>
+              </section>
+            </div>
+            <div class="hx-cursor" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 2l16 9-7 2-3 7z"/></svg>
+              <span data-i18n="hx.click">Click to explore</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT (light, serif) ============ -->
+    <section class="section light" id="product">
+      <div class="wrap center">
+        <h2 class="serif display" data-i18n="product.title">The AI team behind your best work</h2>
+        <p class="lead" data-i18n="product.sub">Start on your laptop, track it on your phone, seamless and efficient.</p>
+      </div>
+      <!-- Interactive preview of the New Task screen: type, press Enter, get a "this is a preview" reply -->
+      <div class="wrap showcase duo reveal">
+        <div class="window light-window demo" id="demo">
+          <div class="window-bar"><i></i><i></i><i></i></div>
+          <div class="demo-body">
+            <aside class="demo-side">
+              <div class="demo-brand"><img src="assets/img/logo.png" alt="" width="22" height="22" /><b>Fynix Task</b>
+                <span class="demo-ico"><svg viewBox="0 0 24 24"><path d="M3 14v-2a9 9 0 0 1 18 0v2M21 15a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2zM3 15a2 2 0 0 0 2 2h1v-5H5a2 2 0 0 0-2 2z"/></svg></span>
+                <span class="demo-ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></svg></span>
+              </div>
+              <nav class="demo-nav">
+                <a class="on"><svg viewBox="0 0 24 24"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7M18.4 2.6a2 2 0 0 1 3 3L12 15l-4 1 1-4z"/></svg><span data-i18n="demo.newTask">New Task</span></a>
+                <a><svg viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M2 21a8 8 0 0 1 13-6M19 16v6M16 19h6"/></svg><span data-i18n="nav.agents">Agents</span></a>
+                <a><svg viewBox="0 0 24 24"><path d="M19.44 7.85c-.05.32.06.65.29.88l1.57 1.57c.47.47.7 1.09.7 1.7s-.23 1.24-.7 1.71l-1.61 1.61a.98.98 0 0 1-.84.28c-.47-.07-.8-.48-.97-.93a2.5 2.5 0 1 0-3.21 3.21c.45.17.86.5.93.97a.98.98 0 0 1-.28.84l-1.61 1.61a2.4 2.4 0 0 1-1.7.7 2.4 2.4 0 0 1-1.7-.7l-1.57-1.57a1.03 1.03 0 0 0-.88-.29c-.49.07-.84.5-1.02.97a2.5 2.5 0 1 1-3.24-3.24c.46-.18.9-.53.97-1.02a1.03 1.03 0 0 0-.29-.88l-1.57-1.57A2.4 2.4 0 0 1 2 12c0-.62.24-1.23.7-1.7l1.53-1.53c.24-.24.58-.35.92-.3.51.08.88.53 1.07 1.01a2.5 2.5 0 1 0 3.26-3.26c-.48-.2-.93-.56-1.01-1.07-.05-.34.06-.68.3-.92L10.3 2.7A2.4 2.4 0 0 1 12 2c.62 0 1.23.24 1.7.7l1.57 1.57c.23.23.56.34.88.29.49-.07.84-.5 1.02-.97a2.5 2.5 0 1 1 3.24 3.24c-.46.18-.9.53-.97 1.02z"/></svg><span data-i18n="demo.plugins">Plugins</span></a>
+                <a><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg><span data-i18n="demo.channels">Channels</span></a>
+              </nav>
+              <p class="demo-sec" data-i18n="demo.history">Task History</p>
+              <div class="demo-tasks">
+                <a class="on" data-i18n="demo.t1">Shop performance review</a>
+                <a data-i18n="demo.t2">Product main images</a>
+                <a data-i18n="demo.t3">Buyer research</a>
+                <a data-i18n="demo.t4">Competitor comparison</a>
+              </div>
+              <p class="demo-sec" data-i18n="hx.groups">Group chats</p>
+              <div class="demo-tasks demo-groups">
+                <a><span class="hx-gstack"><i style="--c1:#f59e0b;--c2:#ef4444"></i><i style="--c1:#ec4899;--c2:#a855f7"></i><i style="--c1:#d946ef;--c2:#f43f5e"></i></span><span data-i18n="demo.t5">Product launch team</span></a>
+              </div>
+              <div class="demo-user"><span>ML</span><b>Mei Ling</b><em data-i18n="demo.upgrade">Upgrade</em></div>
+            </aside>
+
+            <section class="demo-main">
+              <div class="demo-credits"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>520</div>
+
+              <!-- Home (before sending) -->
+              <div class="demo-home">
+                <div class="demo-head">
+                  <span class="demo-av"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9zM19 17l.8 2.2L22 20l-2.2.8L19 23l-.8-2.2L16 20l2.2-.8z"/></svg></span>
+                  <div><b data-i18n="demo.agent">Fynix Assistant</b><small data-i18n="demo.agentDesc">Handles all kinds of business tasks.</small></div>
+                  <span class="demo-switch"><svg viewBox="0 0 24 24"><path d="M16 3l4 4-4 4M20 7H4M8 21l-4-4 4-4M4 17h16"/></svg><span data-i18n="demo.switch">Switch agent</span><i style="--c:#14b8a6"></i><i style="--c:#f97316"></i><i style="--c:#d946ef"></i></span>
+                </div>
+              </div>
+
+              <!-- Conversation (after sending) -->
+              <div class="demo-chat" aria-live="polite"></div>
+
+              <form class="demo-composer" autocomplete="off">
+                <textarea rows="3" data-i18n-placeholder="demo.placeholder" placeholder="How can Fynix Task help your business?" aria-label="Message"></textarea>
+                <div class="demo-bar">
+                  <span class="demo-round"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+                  <span class="demo-spacer"></span>
+                  <span class="demo-ico"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg></span>
+                  <span class="demo-ico"><svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg></span>
+                  <button type="submit" class="demo-send" aria-label="Send" disabled><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+                </div>
+              </form>
+              <div class="demo-chips">
+                <button type="button" data-i18n="demo.c1" data-prompt="demo.p1">Office Productivity</button>
+                <button type="button" data-i18n="demo.c2" data-prompt="demo.p2">Design</button>
+                <button type="button" data-i18n="demo.c3" data-prompt="demo.p3">Website Building</button>
+                <button type="button" data-i18n="demo.c4" data-prompt="demo.p4">Procurement</button>
+                <button type="button" data-i18n="demo.c5" data-prompt="demo.p5">International Store Ops</button>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- Phone mirror: the same task running on Android at the same time -->
+        <div class="demo-phone" aria-hidden="true">
+          <div class="dp-screen">
+            <div class="dp-notch"></div>
+            <div class="dp-top"><span class="dp-burger"><i></i><i></i></span><img src="assets/img/logo.png" alt="" width="18" height="18" /><b>Fynix Task</b><span class="dp-live" data-i18n="auto.live">Live</span></div>
+            <div class="dp-home">
+              <span class="dp-av"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg></span>
+              <b data-i18n="demo.agent">Fynix Assistant</b>
+              <small data-i18n="demo.agentDesc">Handles all kinds of business tasks.</small>
+            </div>
+            <div class="dp-chat"></div>
+            <div class="dp-composer"><span data-i18n="demo.placeholder">How can Fynix Task help your business?</span><b><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AGENTS GALLERY ============ -->
+    <section class="section soft" id="agents">
+      <div class="wrap center">
+        <h2 class="serif display sm" data-i18n="agents.title">Hire an AI agent in a minute</h2>
+      </div>
+      <!-- Live copy of the app's Agents page: a cursor adds an agent and creates a custom one (visitors can click too) -->
+      <div class="wrap agmock-wrap reveal">
+        <div class="window light-window agmock" id="agmock">
+          <div class="window-bar"><i></i><i></i><i></i></div>
+          <div class="ag-body">
+            <aside class="demo-side ag-side">
+              <div class="demo-brand"><img src="assets/img/logo.png" alt="" width="22" height="22" /><b>Fynix Task</b></div>
+              <nav class="demo-nav">
+                <a><svg viewBox="0 0 24 24"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7M18.4 2.6a2 2 0 0 1 3 3L12 15l-4 1 1-4z"/></svg><span data-i18n="demo.newTask">New Task</span></a>
+                <a class="on"><svg viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M2 21a8 8 0 0 1 13-6M19 16v6M16 19h6"/></svg><span data-i18n="nav.agents">Agents</span></a>
+                <a><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg><span data-i18n="demo.plugins">Plugins</span></a>
+                <a><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg><span data-i18n="demo.channels">Channels</span></a>
+              </nav>
+              <p class="demo-sec" data-i18n="demo.history">Task History</p>
+              <div class="demo-tasks">
+                <a data-i18n="demo.t1">Shop performance review</a>
+                <a data-i18n="demo.t2">Product main images</a>
+                <a data-i18n="demo.t3">Buyer research</a>
+              </div>
+              <p class="demo-sec" data-i18n="hx.groups">Group chats</p>
+              <div class="demo-tasks demo-groups">
+                <a><span class="hx-gstack"><i style="--c1:#f59e0b;--c2:#ef4444"></i><i style="--c1:#ec4899;--c2:#a855f7"></i><i style="--c1:#d946ef;--c2:#f43f5e"></i></span><span data-i18n="demo.t5">Product launch team</span></a>
+              </div>
+              <div class="demo-user"><span>ML</span><b>Mei Ling</b><em data-i18n="demo.upgrade">Upgrade</em></div>
+            </aside>
+            <section class="ag-main">
+              <div class="ag-top">
+                <div class="ag-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span data-i18n="ag.search">Search agents</span></div>
+                <button type="button" class="ag-create"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span data-i18n="ag.create">Create agent</span></button>
+              </div>
+              <h3 data-i18n="nav.agents">Agents</h3>
+              <p class="ag-sub" data-i18n="ag.sub">Manage your personal assistants, create new roles and start chatting.</p>
+              <div class="ag-tabs"><span class="on" data-i18n="ag.market">Marketplace</span><span><em data-i18n="ag.installed">Installed</em> · <b class="ag-count">4</b></span></div>
+              <p class="ag-sec" data-i18n="ag.featured">Featured</p>
+              <div class="ag-grid">
+            <div class="ag-card" data-agent="1">
+              <span class="ag-more">···</span>
+              <span class="ag-av" style="--c1:#0ea5e9;--c2:#22c55e"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+              <b data-i18n="a1.name"></b>
+              <span class="ag-by"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Fynix</span>
+              <p data-i18n="a1.desc"></p>
+              <button type="button" class="ag-chat"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><span data-i18n="ag.chat">Chat</span></button>
+            </div>
+            <div class="ag-card" data-agent="2">
+              <span class="ag-more">···</span>
+              <span class="ag-av" style="--c1:#f59e0b;--c2:#ef4444"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg></span>
+              <b data-i18n="a2.name"></b>
+              <span class="ag-by"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Fynix</span>
+              <p data-i18n="a2.desc"></p>
+              <button type="button" class="ag-chat"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><span data-i18n="ag.chat">Chat</span></button>
+            </div>
+            <div class="ag-card" data-agent="3">
+              <span class="ag-more">···</span>
+              <span class="ag-av" style="--c1:#ec4899;--c2:#a855f7"><svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><path d="M12 22a10 10 0 1 1 10-10c0 2-2 3-4 3h-2a2 2 0 0 0-1 3.7A2 2 0 0 1 12 22z"/></svg></span>
+              <b data-i18n="a3.name"></b>
+              <span class="ag-by"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Fynix</span>
+              <p data-i18n="a3.desc"></p>
+              <button type="button" class="ag-chat"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><span data-i18n="ag.chat">Chat</span></button>
+            </div>
+            <div class="ag-card" data-agent="4">
+              <span class="ag-more">···</span>
+              <span class="ag-av" style="--c1:#2563eb;--c2:#06b6d4"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h8M8 16h5"/></svg></span>
+              <b data-i18n="a4.name"></b>
+              <span class="ag-by"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Fynix</span>
+              <p data-i18n="a4.desc"></p>
+              <button type="button" class="ag-chat"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><span data-i18n="ag.chat">Chat</span></button>
+            </div>
+            <div class="ag-card" data-agent="5">
+              <span class="ag-more">···</span>
+              <span class="ag-av" style="--c1:#f97316;--c2:#ef4444"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></span>
+              <b data-i18n="a5.name"></b>
+              <span class="ag-by"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Fynix</span>
+              <p data-i18n="a5.desc"></p>
+              <button type="button" class="ag-chat"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><span data-i18n="ag.chat">Chat</span></button>
+            </div>
+            <div class="ag-card" data-agent="6">
+              <span class="ag-more">···</span>
+              <span class="ag-av" style="--c1:#d946ef;--c2:#f43f5e"><svg viewBox="0 0 24 24"><path d="M3 11l15-7v16L3 13zM7 12v6a2 2 0 0 0 4 0v-4"/></svg></span>
+              <b data-i18n="a6.name"></b>
+              <span class="ag-by"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Fynix</span>
+              <p data-i18n="a6.desc"></p>
+              <button type="button" class="ag-chat"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><span data-i18n="ag.chat">Chat</span></button>
+            </div>
+              </div>
+              <div class="ag-modal" hidden>
+                <div class="ag-dialog">
+                  <b data-i18n="ag.create">Create agent</b>
+                  <label><span data-i18n="ag.nameLabel">Agent name</span><div class="ag-input"><span class="ag-typed"></span><i class="ag-caret"></i></div></label>
+                  <label><span data-i18n="ag.roleLabel">What does it do?</span><div class="ag-input ag-role"></div></label>
+                  <div class="ag-actions"><button type="button" class="ag-cancel" data-i18n="ag.cancel">Cancel</button><button type="button" class="ag-confirm" data-i18n="ag.confirm">Create</button></div>
+                </div>
+              </div>
+              <div class="ag-toast" role="status"></div>
+            </section>
+          </div>
+          <div class="hx-cursor ag-cursor" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 2l16 9-7 2-3 7z"/></svg>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="wrap center"><a class="btn btn-accent btn-lg" href="/task/app/login"><span data-i18n="agents.cta">Browse all agents</span> <svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </section>
+
+    <!-- ============ MOBILE (dark) ============ -->
+    <section class="section dark" id="mobile">
+      <div class="wrap mobile">
+        <div class="mobile-copy reveal">
+          <h2 class="serif display sm on-dark" data-i18n="mobile.title">Close the laptop. Your business keeps moving.</h2>
+          <p class="on-dark-muted" data-i18n="mobile.body">The same Fynix Task, in your pocket. Start a task with your voice or a photo, switch agents, and pick up any conversation you began on your computer.</p>
+          <ul class="checks on-dark">
+            <li data-i18n="mobile.b1">Identical to the web app: every page, every agent</li>
+            <li data-i18n="mobile.b2">Voice input, camera and file uploads</li>
+            <li data-i18n="mobile.b3">Finds your Fynix Task server on the Wi-Fi by itself</li>
+          </ul>
+          <div class="stores">
+            <a class="store" href="/task/app/login" aria-label="Get it on Google Play">
+              <svg class="gp" viewBox="0 0 24 24"><path d="M3.6 2.3 13.3 12 3.6 21.7c-.4-.2-.6-.7-.6-1.2V3.5c0-.5.2-1 .6-1.2z" fill="#00A0FF"/><path d="M16.6 8.7 13.3 12 3.6 2.3c.3-.2.8-.2 1.3.1z" fill="#00E676"/><path d="M16.6 15.3 4.9 21.6c-.5.3-1 .3-1.3.1L13.3 12z" fill="#FF3A44"/><path d="M20.3 10.8c.9.5.9 1.9 0 2.4l-3.7 2.1L13.3 12l3.3-3.3z" fill="#FFD500"/></svg>
+              <span><small data-i18n="store.gpTop">GET IT ON</small><b>Google Play</b></span>
+            </a>
+            <a class="store" href="/task/app/login" aria-label="Download on the App Store">
+              <svg viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+              <span><small data-i18n="store.asTop">Download on the</small><b>App Store</b></span>
+            </a>
+          </div>
+        </div>
+        <div class="phones reveal">
+          <div class="phone p1"><img src="assets/img/phone-agents.webp" alt="Agents on the phone" loading="lazy" width="393" height="852" /></div>
+          <div class="phone p2"><img src="assets/img/phone-home.webp" alt="New task on the phone" loading="lazy" width="393" height="852" /></div>
+          <div class="phone p3"><img src="assets/img/phone-menu.webp" alt="Menu on the phone" loading="lazy" width="393" height="852" /></div>
+        </div>
+      </div>
+    </section>
+
+        <!-- ============ PRICING ============ -->
+    <section class="section soft" id="pricing">
+      <div class="wrap center">
+        <h2 class="serif display" data-i18n="pricing.title">Pricing</h2>
+        <p class="lead" data-i18n="pricing.sub">Choose a plan, then start working with your AI team.</p>
+        <div class="plan-toggle" role="tablist">
+          <button type="button" role="tab" class="on" data-plans="individual" aria-selected="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-i18n="plans.individual">Individual</span></button>
+          <button type="button" role="tab" data-plans="team" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20a7 7 0 0 1 14 0M15 14.5a5 5 0 0 1 7 5.5"/></svg><span data-i18n="plans.team">Team &amp; Enterprise</span></button>
+        </div>
+      </div>
+      <div class="wrap plans plans-2" data-group="individual">
+        <div class="plan">
+          <h3 class="serif" data-i18n="plan.pro"></h3>
+          <p class="plan-desc" data-i18n="plan.proDesc"></p>
+          <p class="price"><b>$18</b></p>
+          <p class="plan-note" data-i18n="plan.proNote"></p>
+          <a class="btn btn-accent btn-block" href="/task/app/login" data-i18n="plan.ctaTry"></a>
+        </div>
+        <div class="plan featured">
+          <h3 class="serif" data-i18n="plan.elite"></h3>
+          <p class="plan-desc" data-i18n="plan.eliteDesc"></p>
+          <p class="price"><b>$88</b></p>
+          <p class="plan-note" data-i18n="plan.perMonthCap"></p>
+          <a class="btn btn-accent btn-block" href="/task/app/login" data-i18n="plan.ctaTry"></a>
+        </div>
+      </div>
+      <div class="wrap plans plans-2" data-group="team" hidden>
+        <div class="plan">
+          <svg class="tree" viewBox="0 0 56 52" aria-hidden="true"><path d="M8 20 V48 H48 V20"/><rect x="14" y="30" width="12" height="18" class="fill"/><rect x="31" y="30" width="11" height="9"/><path d="M6 8 H50 L52 18 H4 Z" class="fill"/><path d="M4 18 Q9 25 14 18 Q19 25 24 18 Q29 25 34 18 Q39 25 44 18 Q49 25 52 18"/><path d="M15 8 L13 18 M26 8 V18 M37 8 L39 18"/></svg>
+          <h3 class="serif" data-i18n="plan.team"></h3>
+          <p class="plan-desc" data-i18n="plan.teamDesc"></p>
+          <p class="price"><b>$30</b></p>
+          <p class="plan-note" data-i18n="plan.teamNote"></p>
+          <a class="btn btn-accent btn-block" href="/task/app/login" data-i18n="plan.ctaTeam"></a>
+        </div>
+        <div class="plan">
+          <svg class="tree" viewBox="0 0 56 52" aria-hidden="true"><path d="M10 48 V10 L30 4 V48"/><rect x="30" y="20" width="16" height="28" class="fill"/><path d="M16 16 H24 M16 24 H24 M16 32 H24"/><rect x="15" y="38" width="9" height="10" class="fill"/><path d="M6 48 H50"/></svg>
+          <h3 class="serif" data-i18n="plan.enterprise"></h3>
+          <p class="plan-desc" data-i18n="plan.enterpriseDesc"></p>
+          <p class="price"><b></b></p>
+          <p class="plan-note"></p>
+          <a class="btn btn-accent btn-block" href="mailto:jojosam@fynixtech.sg?subject=Fynix%20Task%20Enterprise" data-i18n="plan.ctaEnterprise"></a>
+        </div>
+      </div>
+      <p class="plans-foot" data-i18n="plans.gst">Prices include 9% GST</p>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section light" id="faq">
+      <div class="wrap narrow">
+        <h2 class="serif display sm center" data-i18n="faq.title">FAQ</h2>
+        <details><summary data-i18n="faq.q1">What is Fynix Task?</summary><p data-i18n="faq.a1">An AI workspace where specialist agents handle business tasks for you, from sourcing and design to websites and store operations, on the web and on your phone.</p></details>
+        <details><summary data-i18n="faq.q2">Do I need to install anything?</summary><p data-i18n="faq.a2">No. Open Fynix Task in your browser. The Android app is optional and shows exactly the same workspace.</p></details>
+        <details><summary data-i18n="faq.q3">Which languages are supported?</summary><p data-i18n="faq.a3">English, Simplified Chinese, Traditional Chinese and Bahasa Melayu, in the app, on the phone and in agent replies.</p></details>
+        <details><summary data-i18n="faq.q4">Can I use my own server?</summary><p data-i18n="faq.a4">Yes. Fynix Task runs with Docker on your own machine or cloud server, and your phone finds it on the same Wi-Fi automatically.</p></details>
+        <details><summary data-i18n="faq.q5">What are credits?</summary><p data-i18n="faq.a5">Agents use credits as they work. Every plan includes daily credits, and paid plans add a monthly allowance and top-up packs.</p></details>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band">
+      <div class="wrap center">
+        <h2 class="serif display sm on-dark" data-i18n="band.title">Hire your AI team to start work today</h2>
+        <div class="center-ctas">
+          <a class="btn btn-accent btn-lg" href="/task/app/login" data-i18n="hero.ctaWeb">Try in your browser</a>
+          <a class="btn btn-outline-dark btn-lg" href="/task/app/login" data-i18n="hero.ctaApp">Get the Mobile App</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="footer-about">
+        <a class="brand on-dark" href="/main"><img src="assets/img/logo.png" alt="" width="30" height="30" /><span>Fynix Task</span></a>
+        <p class="footer-tag" data-i18n="footer.about">Singapore Web &amp; Mobile AI Agent. AI agents that handle sourcing, design and store operations, built by Fynix Tech, Singapore.</p>
+      </div>
+      <div>
+        <h5 data-i18n="footer.company">Company</h5>
+        <!-- Replace "#" with the real pages when they exist -->
+        <a href="#" data-i18n="footer.aboutUs">About us</a>
+        <a href="/privacy-policy" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="/terms-of-service" data-i18n="footer.terms">Terms of Service</a>
+      </div>
+      <div>
+        <h5 data-i18n="footer.products">Products</h5>
+        <a href="/agents" data-i18n="footer.web">Web app</a>
+        <a href="/mobile" data-i18n="footer.android">Mobile App</a>
+        <a href="/pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="/faq" data-i18n="nav.faq">FAQ</a>
+      </div>
+      <div>
+        <h5 data-i18n="footer.follow">Follow us</h5>
+        <!-- Social links: replace "#" with the real profiles -->
+        <nav class="socials" aria-label="Social">
+          <button type="button" aria-label="Instagram"><svg viewBox="0 0 24 24"><defs><radialGradient id="igg" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><path fill="url(#igg)" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></button>
+          <button type="button" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.6H4.8V19h2.3zM6 5.2a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8zM19.3 13.6c0-2.6-.6-4.2-3.4-4.2-1.4 0-2.3.7-2.7 1.4V9.6H11V19h2.3v-4.6c0-1.2.2-2.4 1.7-2.4s1.6 1.4 1.6 2.5V19h2.3z"/></svg></button>
+          <button type="button" aria-label="Facebook"><svg viewBox="0 0 24 24"><path fill="#0866FF" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></button>
+          <button type="button" aria-label="X"><svg viewBox="0 0 24 24"><path fill="#000" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></button>
+        </nav>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span class="copy" data-i18n="footer.copy">© 2026 Fynix Tech. All rights reserved. Registered in Singapore.</span>
+      <div class="footer-right">
+        <div class="lang-menu">
+          <ul class="lang-list" role="listbox" aria-label="Language">
+            <li role="option" data-lang="en">English</li>
+            <li role="option" data-lang="zh-CN">简体中文</li>
+            <li role="option" data-lang="zh-TW">繁體中文</li>
+            <li role="option" data-lang="ms">Bahasa Melayu</li>
+          </ul>
+          <button type="button" class="lang-btn" aria-haspopup="listbox" aria-expanded="false">
+            <svg class="i sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            <span class="lang-cur">English</span>
+            <svg class="i sm chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <!-- the page's language logic listens to this select -->
+          <select id="lang" aria-hidden="true" tabindex="-1" hidden>
+            <option value="en">English</option>
+            <option value="zh-CN">简体中文</option>
+            <option value="zh-TW">繁體中文</option>
+            <option value="ms">Bahasa Melayu</option>
+          </select>
+        </div>
+        <span class="footer-links"><a href="/privacy-policy" data-i18n="footer.privacyShort">Privacy</a> · <a href="/terms-of-service" data-i18n="footer.terms">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+  <a class="wa-float" href="https://wa.me/6591237341?text=Hi%20Fynix%2C%20I%20am%20interested%20to%20know%20more%20about%20the%20product.%20Thanks." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <span class="wa-ring"></span><span class="wa-ring r2"></span>
+    <svg viewBox="0 0 24 24"><path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+  <a class="to-top" href="/main" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+
+  <script src="assets/i18n.js?v=20260927194614"></script>
+  <script src="assets/app.js?v=20260927194614"></script>
+</body>
+</html>
